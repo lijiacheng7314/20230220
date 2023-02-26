@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt=""> -->
+<body>
+    <script>
+        // let image = new Image()
+        // image.src = 'https://fanyi-cdn.cdn.bcebos.com/static/translation/img/header/logo_e835568.png'
+        // document.body.appendChild(image)
+
+
+        // let op = new Promise(function (reslove, reject) {
+        //     let aimg = new Image()
+        //     aimg.src = 'https://fanyi-cdn.cdn.bcebos.com/static/translation/img/header/logo_e835568.png'
+        //     aimg.onload = function () {
+        //         reslove(aimg)
+        //     }
+        //     aimg.onerror = function(){
+        //         reject()
+        //     }
+
+        // })   
+
+        // const mgs = new Promise((reslove,reject)=>{
+        //     const imgs = new Image()
+        //     imgs.src = 'https://fanyi-cdn.cdn.bcebos.com/static/translation/img/header/logo_e835568.png'
+        //     console.log(imgs)
+        //     imgs.onload = function(){
+        //         reslove(imgs)
+        //     }
+        //     imgs.onerror = function(){
+        //         reject()
+        //     }
+        // })
+        // mgs.then((image)=>{ 
+        //     document.body.appendChild(image)
+        // }).catch(()=>{
+        //     console.log('加载失败')
+        // })
+
+
+
+
+
+
+
+
+        // const od = new Promise((reslove, reject) => {
+        //     const img = new Image()
+        //     img.src = 'https://fanyi-cdn.cdn.bcebos.com/static/translation/img/header/logo_e835568.png'
+        //     img.onload = () => {
+        //         reslove(img)
+        //     }
+        //     img.onerror = () => {
+        //         reject('加载失败')
+        //     }
+        // }).then((msg) => {
+        //     document.body.appendChild(msg)
+        // }).catch((rs) => {
+        //     console.log('图片加载失败')
+        // })
+
+
+        // newMig('https://fanyi-cdn.cdn.bcebos.com/static/translation/img/header/logo_e835568.png').then((msg) => {
+        //     document.body.appendChild(msg) 
+        //     return newMig('https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg')
+        // }).then((msg)=>{
+        //     document.body.appendChild(msg)
+        // }).
+        // catch((rs) => {
+        //     console.log('图片加载失败')
+        // })
+        // function newMig(src) {
+        //     return new Promise((reslove, reject) => {
+        //         const img = new Image()
+        //         img.src = src
+        //         img.onload = () => {
+        //             reslove(img)
+        //         }
+        //         img.onerror = () => {
+        //             reject('加载失败')
+        //         }
+        //     })
+        // }
+
+
+
+
+
+
+
+        function newSImg(src){
+            return new Promise((resect,reject)=>{
+                const mage = new Image()
+                mage.src = src
+                console.log(mage)
+                mage.onload = function(){
+                    resect(mage)
+                }
+                mage.onerror = function(){
+                    reject()
+                }
+            })
+        }
+ 
+
+        // newSImg('https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg').then((img)=>{
+        //     document.body.appendChild(img)
+        //     return newSImg('https://fanyi-cdn.cdn.bcebos.com/static/translation/img/header/logo_e835568.png')
+        // }).then((i)=>{
+        //     document.body.appendChild(i)
+        // })
+        // .catch(()=>{
+        //     console.log('加载失败')
+        // })
+
+
+
+        // (async function(){
+        //     try{
+        //          const img1 = await newSImg('https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg')
+        //          document.body.appendChild(img1)
+
+        //     } catch(str){
+        //         console.log(str)
+        //     }
+        // })()
+    </script>
+</body>
+
+</html>

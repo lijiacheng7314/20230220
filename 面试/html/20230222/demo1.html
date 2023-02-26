@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Pog {
+            constructor(name) {
+                this.name = name
+            }
+
+        }
+        class Gog extends Pog {
+            constructor(name, age) {
+                super(name)
+                this.age = age
+            }
+        }
+        // .__proto__     prototype
+        let gog = new Gog('小明')
+        console.log(fn(gog, Object))
+        // function fn(obj1, obj2) {
+        //     let obj1to = obj1.__proto__
+        //     while (true) {
+        //         if (obj1to == null) {
+        //             return false
+        //         }
+        //         if (obj1to == obj2.prototype) {
+        //             return true
+        //         }
+        //         obj1to = obj1to.__proto__
+        //     }
+
+        // }
+
+
+
+
+
+        // function fn(obj1,obj2){
+        //     let obj1to = obj1.__proto__
+        //     while(true){
+        //         if(obj1to == null){
+        //             return false
+        //         }
+        //         if(obj1to == obj2.prototype){
+        //             return true
+        //         }
+        //         obj1to = obj1to.__proto__
+        //     }
+        // }
+
+
+
+
+
+
+
+
+ // .__proto__     prototype
+        function fn(obj1,obj2){
+            let obj1to = obj1.__proto__;
+            let obj2to = obj2.prototype;
+            while(true){
+                if(obj1to == null){
+                    return false
+                }
+                if(obj1to == obj2to){
+                    return true
+                }
+                obj1to = obj1to.__proto__
+            }
+        }
+    </script>
+</body>
+
+</html>

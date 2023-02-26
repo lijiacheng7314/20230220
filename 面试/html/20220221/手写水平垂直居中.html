@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            border: 5px solid red; 
+            position: relative;
+             display: flex;
+             justify-content: center;
+           align-items: center ;
+        }
+        .list{
+            width: 300px;
+            height: 200px;
+            background-color: springgreen;  
+            position: absolute;  
+            left: 50%;
+            top: 50%; 
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> 
+        <div class="list"></div>
+    </div>
+    <!-- 
+
+        手写水清垂直居中
+            1.定位父级 position: relative;子级设置position: absolute
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -100px;
+            2.定位父级 
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            3.定位父级position: relative;子级设置;
+            left: 50%;
+            top: 50%; 
+            transform: translate(-50%,-50%);
+            4.用弹性布局直接给父级设置
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+
+     -->
+</body>
+</html>

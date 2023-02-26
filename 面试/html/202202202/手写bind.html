@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            overflow: hidden;
+            clear: both;
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function fun(num1,num2,num3){
+            console.log(this)
+            console.log(num1,num2,num3)
+            return 'hello bind'
+        }
+        // let rs = fun.bind({x:'miaomioa'},1,2,3)
+        // rs()
+
+        // 手写bind
+        Function.prototype.myBind = function(){
+            console.log(this) 
+            const arg = Array.prototype.slice.call(arguments);
+            const _this = arg.shift();
+            return function(){
+                fun.apply(_this,arg)
+            }
+        }
+        let rs = fun.myBind({x:'miaomioa'},1,2,3)
+        rs()
+    </script>
+</body>
+</html>

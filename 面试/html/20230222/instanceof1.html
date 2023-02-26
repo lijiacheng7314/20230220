@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Pog {
+            constructor(name) {
+                this.name = name
+            }
+        }
+        class Dog extends Pog {
+            constructor(name, sex) {
+                super(name)
+                this.sex = sex
+            }
+        }
+        let dog = new Dog('1')
+        // let dog = new Dog(1,'2')
+        
+        console.log(instas(dog,Array))
+
+        instanceof
+        // obj1.__proto__;
+        //     let obj2prototype = obj2.prototype
+
+        function instas(obj1,obj2) {
+            let obj1s = obj1.__proto__
+            let obj2s = obj2.prototype
+            while (true) {
+                if (obj1s == null) {
+                    return false
+                }else if(obj1s == obj2s){
+                    return true
+                }
+                obj1s = obj1s.__proto__
+            }
+
+        }
+    </script>
+</body>
+
+</html>

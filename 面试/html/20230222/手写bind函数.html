@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn(num1,num2,num3){
+            console.log(this)
+            console.log(num1,num2,num3)
+            return 'hello bind'
+        }
+        // let cd = fn.bind({x:'2'},1,2,3)
+        // console.log(cd())
+        
+
+        Function.prototype.myBind = function(){
+            console.log(this)
+            let rs = this 
+            return function(){
+                
+            }
+        }
+
+        let cd = fn.myBind() 
+    </script>
+</body>
+</html>

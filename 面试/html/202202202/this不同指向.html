@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // "use strict"
+        // function fun(){
+        //     console.log(this)
+        // } 
+        
+        // let obj = {
+        //     name:'小明',
+        //     sty(){
+        //         let thte = this
+        //         setTimeout(function(){
+        //             console.log(thte)
+        //         }, 100);
+        //     }
+        // }
+        // obj.sty() 
+
+        // fun.apply('5')
+
+
+        // 下列三种除了 没有参数  undefined null 是window 
+        // 有参数 传什么this就是什么
+        // fun.apply 
+        // fun.bind
+        // fun.call
+        //  
+        // setTimeout(function(){
+        //     console.log(this)
+        // },100)
+
+        // setTimeout(()=>{
+        //     console.log(this)
+        // },100)
+
+        // let obj = {
+        //     name:'666',
+        //     fun() { 
+        //         console.log(this)
+        //         setTimeout(() => {
+        //             console.log(this)
+        //         }, 100)
+        //     }
+        // }
+        // obj.fun()
+
+
+        // let obj = {
+        //     name:'666',
+        //     fun() { 
+        //         let thte = this
+        //         setTimeout(function(){
+        //             console.log(this)
+        //         }, 100)
+        //     }
+        // }
+        // obj.fun()
+
+
+
+        console.log('-------1---------')
+        setTimeout(()=>{
+            console.log('-----------2------------')
+        },2000);
+
+
+        
+
+
+
+        console.log('-------------3------------')  
+    </script>
+
+</body>
+
+</html>  

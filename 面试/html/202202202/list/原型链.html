@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class Xiaom {
+        //     constructor(name, age) {
+        //         this.name = name
+        //         this.age = age
+        //     }
+        //     fun() {
+        //         console.log(`我是${this.name}我今年${this.age}`)
+        //     }
+        // }
+        // let rs = new Xiaom('小明', '18') 
+        // class Xiaoh extends Xiaom{
+        //     constructor(name,age,esx){
+        //         super(name,age) 
+        //         this.esx = esx
+        //     }
+        //     syHello(){
+        //         console.log(`我是${this.name}我今年${this.age}我喜欢${this.esx}`)
+        //     }
+        // }
+        // let xiaoh = new Xiaoh('小红','12','跳舞');
+        // xiaoh.syHello() 
+
+
+        // class Xiaom{
+        //     constructor(name,age){
+        //         this.name = name
+        //         this.age = age
+        //     }
+        //     Syhello(){
+        //         console.log(`我叫${this.name},今年${this.age}`)
+        //     }
+
+        // } 
+        // class Wh extends Xiaom{
+        //     constructor(name,age,sex) {
+        //         super(name,age)
+        //         this.sex = sex
+        //     }
+        //     Syhi(){
+        //         console.log(`我叫${this.name},今年${this.age}爱好${this.sex}`)
+        //     }
+        // }
+        // let rs = new Wh('王浩','20','泡妞')
+        // rs.Syhi()
+
+
+
+
+
+            class Dog{
+                constructor(name,age){
+                    this.name = name
+                    this.age = age
+                }
+                syhello(){
+                    console.log(`大家好我叫${this.name}今年${this.age}岁`);
+                }
+            }
+            // let res = new Dog('猪猪',2);
+
+
+            class Pog extends Dog{
+                constructor(name,age,sex) {
+                    super(name,age)
+                    this.sex = sex
+                }
+                syHi(){
+                    console.log(`大家好我叫${this.name}今年${this.age}岁，爱好${this.sex}`)
+                }
+            } 
+            let res = new Pog('旺财','2','吃骨头')
+            res.syhello()
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

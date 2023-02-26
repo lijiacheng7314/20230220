@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function fun(num1,nun2,nun3){
+        //     console.log(this)
+        //     console.log(num1,nun2,nun3)
+        //     return "hello bind"
+        // }
+        // let cd = fun.bind({x:'y'},1,2,3)
+        // cd()
+
+        // Function.prototype.myBind = function(){
+        //     console.log(this) 
+        //     const arg = Array.prototype.slice.call(arguments)
+        //     const _this = arg.shift()
+        //     return function(){ 
+        //         fun.apply(_this,arg)
+        //     }
+        // } 
+        // let cd = fun.myBind({x:'2'},1,8,3)  
+        // cd() 
+
+
+
+            // 手写bind函数
+
+            // function fun(num1,num2,num3){
+            //     console.log(this)
+            //     console.log(num1,num2,num3)
+            //     return "hello bind"
+            // }
+            // // let cb = fun.bind({x:'l'},1,2,3)
+            // // cb()
+
+
+
+            // Function.prototype.myBind = function(){
+            //     const age = Array.prototype.slice.call(arguments)
+            //     const  _this = _this.shift()
+            //     return function(){
+            //         fun.apply(_this,age)
+            //     }
+            // }
+
+            // let cb = fun.myBind({x:'l'},1,2,3)
+            // cb()
+
+
+
+
+                // let obj = {
+                //     name:'666',
+                // }
+                // function fun(){
+                //     console.log(this.name)
+                // }
+                // obj.fun()
+                // fun()
+
+
+
+    
+
+    
+//  值型   string  number Boolean 
+//  null array  
+
+
+
+    // function fun(num1,num2,num3){
+    //     console.log(this)
+    //     console.log(num1,num2,num3)
+    //     return "hello bind"
+    // }
+    // // let rs = fun.bind({x:'o'},1,2,3)
+    // // rs()
+
+    // Function.prototype.myBind = function(){
+    //     let arg = Array.prototype.slice.call(arguments)     
+    //     let _this = arg.shift()
+    //     return function(){
+    //         fun.apply(_this,arg)
+    //     }
+    // }
+
+    // let rs = fun.myBind({x:'y'},1,2,3)
+    // rs()
+
+ 
+
+
+    // 直型   string number  Boolean symalb
+    // 引用型  array  null 
+
+
+    </script>
+</body>
+</html>

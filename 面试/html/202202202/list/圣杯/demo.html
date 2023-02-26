@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{ 
+            overflow: hidden;
+        }
+        .layer{
+            width: 100%;
+        }
+        .list{
+            float: left;
+        }
+        .center{
+            margin-left: 200px;
+            margin-right: 150px;
+            height: 200px;
+            background-color: red;
+        }
+        .l-list{
+            width: 200px;
+            background-color: green;
+            margin-left: -100%;
+        }
+        .r-list{
+            width: 150px;
+            margin-left: -150px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="layer list">
+            <div class="center">2</div>
+        </div>
+        <div class="list l-list">1</div>
+        <div class="list r-list">3</div>
+    </div>
+</body>
+</html>

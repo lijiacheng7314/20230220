@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>深度克隆浅度克隆</title>
+  <style>
+    * {
+      position: relative;
+      position: absolute;
+      display: flex;
+      display: block;
+      display: inline;
+      position: fixed;
+      overflow: hidden;
+      float: left;
+      clear: both;
+      transform: translate();
+      display: flex;
+      justify-self: center;
+      align-items: center;
+      position: relative;
+      position: relative;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body></body>
+<script>
+
+
+  // instanceof
+  // typeof
+  // JSON.parse
+  // JSON.stringify
+  // Number
+  // String
+  // null
+  // Boolean
+  // Symbol
+  // Array
+  // undefined
+  // hasOwnProperty
+  // __proto__
+  // protypeof
+
+
+  const obj1 = {
+    name: "张三",
+    age: 18,
+    address: {
+      city: "北京",
+    },
+    hobby: ["台球", "篮球"],
+    fn: function () {
+      console.log(123);
+    },
+  };
+
+  const obj2 = deepClone(obj1);
+  obj2.age = 20;
+  obj2.address.city = "上海";
+  console.log(obj1);
+  console.log(obj2);
+
+  // function deepClone(obj){
+  //     return JSON.parse(JSON.stringify(obj))
+  // } 
+
+
+
+
+  function deepClone(obj) {
+    if (typeof obj !== "object" || obj == null) {
+      return obj;
+    }
+    let res = obj instanceof Array ? [] : {};
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        res[key] = deepClone(obj[key]);
+      }
+    }
+    return res;
+  }
+
+
+
+  // function deepClone(obj){
+  //     if(typeof obj !== "object" || obj == null){
+  //         return obj
+  //     }
+  //     let res = obj instanceof Array ? [] : {};
+  //     for(let key in obj){ 
+  //         res[key] = deepClone(obj[key]) 
+  //     }
+  //     return res
+  // } 
+
+
+
+  szx
+
+
+
+
+
+
+
+  function deepClone(obj) {
+    if (typeof obj !== 'object' || obj == null) {
+      return obj
+    }
+    let res = obj instanceof Array ? [] : {};
+    for (let key in obj) {
+      res[key] = deepClone(obj[key])
+    }
+    return res
+  }
+
+
+
+
+
+
+</script>
+
+</html>

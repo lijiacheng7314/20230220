@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        } 
+        .box{
+            overflow: hidden;
+        }
+        .list{
+            float: left;
+        }
+        .box-1{
+            width: 100%;
+
+        }
+        .center{
+            height: 200px;
+            background-color: green;
+            margin-left: 200px;
+            margin-right: 150px;
+        }
+        .l-list{
+            width: 200px;
+            margin-left: -100%;
+            background-color: red;
+        }
+        .r-list{
+            width: 150px;
+            margin-left: -150px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-1 list">
+            <div class="center">中间的大块</div>
+        </div>
+        <div class="list l-list">左边的内容</div>
+        <div class="list r-list">右边的位置</div>
+    </div>
+</body>
+</html>

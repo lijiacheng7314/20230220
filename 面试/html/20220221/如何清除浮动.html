@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 500px;
+            border: 5px solid red;
+            /* overflow: hidden; */
+            /* float: left; */
+        }
+
+        .list {
+            width: 200px;
+            height: 200px;
+            background-color: seagreen;
+            float: left;
+        }
+
+        /* .ben{
+            clear: both;
+        } */
+        .box::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /* 清除浮动方法
+            1.在父级添加overflow: hidden;
+            2.给父级也添加浮动float: left;
+            3.在最后设置一个标签设置clear: both;
+            4.用伪类.box::after { content: "";display: block; clear: both;}
+         */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="list"></div>
+    </div>
+</body>
+
+</html>

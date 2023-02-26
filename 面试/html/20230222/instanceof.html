@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Dog{
+            constructor(name){
+                this.name = name
+            }
+        }
+        class Pog extends Dog{
+            constructor(name,age) {
+                super(name)
+                this.age = age
+            }
+        }
+        let pog = new Pog('xiaom') 
+        console.log(instans(pog,Object))
+        function instans(obj1,obj2){
+            let obj1proto = obj1.__proto__;
+            let obj2prototype = obj2.prototype
+            while(true){
+                if(obj1proto == null){
+                    return false
+                }else if(obj1proto == obj2prototype){
+                    return true
+                }
+                obj1proto = obj1proto.__proto__
+            }
+        }
+    </script>
+</body>
+</html>
